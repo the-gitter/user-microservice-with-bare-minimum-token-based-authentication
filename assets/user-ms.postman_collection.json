@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "4fbc2883-2ce5-4299-b5a9-290ddb7373ca",
+		"name": "user-ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12805741"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"meesalapava2006@gmail.com\",\r\n    \"password\":\"7b9mbednea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/api/firebase-singup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"api",
+						"firebase-singup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/api/firebase-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"api",
+						"firebase-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJLc2RKalhka3l4U1pZOUlzUHFxeldPWERoOGcyIiwiX2lkIjoiNjY0NjAzMTE4MTg1ZGQ1ZTA1YWE3MTA1IiwiaWF0IjoxNzE1ODY4OTU0LCJleHAiOjE3MTU4NzI1NTQsImF1ZCI6IktzZEpqWGRreXhTWlk5SXNQcXF6V09YRGg4ZzIiLCJpc3MiOiJ0aGVnaXR0ZXIuY29tIn0.q46m1bDlTJiyjueA1OwWGAQ7KkjcEC3LSBChsznk_pE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh tokens",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUGF2YW4gS3VtYXIiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSS1xZXFfdVFrU1dVUzVfQ1F5QTg2MGxJaGZhQmhwaW41SjVqWFNvWTZPejJCZDlNVUo9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZWNvbW1lcmNlLWI2YWQzIiwiYXVkIjoiZWNvbW1lcmNlLWI2YWQzIiwiYXV0aF90aW1lIjoxNzE0Mzk2MDA0LCJ1c2VyX2lkIjoiS3NkSmpYZGt5eFNaWTlJc1BxcXpXT1hEaDhnMiIsInN1YiI6IktzZEpqWGRreXhTWlk5SXNQcXF6V09YRGg4ZzIiLCJpYXQiOjE3MTU4Njg5NDAsImV4cCI6MTcxNTg3MjU0MCwiZW1haWwiOiJtZWVzYWxhcGF2YW4yMDAzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTAzODcwMzA4MzY3NTU0MDEwMzE3Il0sImVtYWlsIjpbIm1lZXNhbGFwYXZhbjIwMDNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoiZ29vZ2xlLmNvbSJ9fQ.LJd9QoqmVu08Dgm-eUM873VjKOoj3z9-1oJCs2dIfILgafdbkrF4kPWbK3zxmGKzV1xbtvn-R7M0Mdmpv25vONhS2VVZiPK-eCSjCkiuaYTdDlGDREHeNZwerGwTzaxL30f4XlR6Czv0NcIYiaXsRkhEJQpEy3WcUkhxL22T9Jsfp_PvXKXEbEp2-SYZyjX2NKMpFNtZ_jhz8s_DmFp8lZJEJoMY4y5qgNWxwgDutuHF_ACO6w2wJKUnv56dEfO9Ks9O_gSfhRzEGhxLbs3UogI_IfYhsDSDWjpaR8asIpbXfaYFfku0p5XNk47Odgi7jSWmUDY2-LpAgwcEugX-qA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
